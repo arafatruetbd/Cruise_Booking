@@ -157,6 +157,14 @@
             return quantityCount;
         }
 
+        function setAllZero() {
+            document.getElementById('first-count').value = "0";
+            document.getElementById('economy-count').value = "0";
+            document.getElementById('total-price').innerText = "0";
+            document.getElementById('tax-amount').innerText = "0";
+            document.getElementById('grand-total').innerText = "0";
+        }
+
         function book() {
             firstCount = parseInt(document.getElementById('first-count').value);
             economyCount = parseInt(document.getElementById('economy-count').value);
@@ -164,7 +172,8 @@
             if (totalCount <= 0) {
                 alert("Please book at least one ticket");
             } else {
-                alert(`Ticket Booked Successfully\nNo. of First Class Ticket:${firstCount}\n No. of Economy Class Ticket: ${economyCount}\n  Total Ticket: ${totalCount}\n Total Tax: ${tax} \n Total Price ${grandTotal}\n Thank You for being with us`)
+                alert(`Ticket Booked Successfully\nNo. of First Class Ticket:${firstCount}\n No. of Economy Class Ticket: ${economyCount}\n  Total Ticket: ${totalCount}\n Total Tax: ${tax} \n Total Price ${grandTotal}\n Thank You for being with us`);
+                setAllZero();
             }
         }
 
